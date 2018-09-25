@@ -1,3 +1,4 @@
+import { DownloadPage } from './../pages/tms/download/download';
 import { FamilyPage } from './../pages/pi/family/family';
 import { EducationPage } from './../pages/pi/education/education';
 import { PersonalInformationPage } from './../pages/pi/personal-information/personal-information';
@@ -19,7 +20,7 @@ import { PaymentSlipPage } from '../pages/ps/payment-slip/payment-slip';
 import { EaPage } from '../pages/ps/ea/ea';
 import { PaymentHistoryPage } from '../pages/ps/payment-history/payment-history';
 
-const tms = [PunchPage, AttendancePage];
+const tms = [PunchPage, AttendancePage, DownloadPage];
 const pi = [PersonalInformationPage, EducationPage, FamilyPage];
 const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
 

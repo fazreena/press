@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, Events } from 'ionic-angular';
 import { DataApiProvider } from '../../providers/data-api/data-api';
 import { PunchPage } from '../tms/punch/punch';
 import { PersonalInformationPage } from '../pi/personal-information/personal-information';
@@ -46,20 +46,30 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
-    public dataApi: DataApiProvider
+    public dataApi: DataApiProvider, 
+    public events: Events
   ) {
+    this.choose_module('home');
   } 
 
   public gotoPage(page: string) {
     if (page == 'PunchPage'){ 
+      this.choose_module('tms');
       this.navCtrl.setRoot(PunchPage)
     } else if (page == 'PersonalInformationPage') {
+      this.choose_module('pi');
       this.navCtrl.setRoot(PersonalInformationPage)
     } else if (page == 'PaymentSlipPage') {
+      this.choose_module('ps');
       this.navCtrl.setRoot(PaymentSlipPage)
     } else
       this.showAlert('Not available yet!', 'This module will be in future implementation. Insya Allah.')
 
+  }
+
+  choose_module(module) {
+    console.log('Menu choosed: ' + module)
+    this.events.publish('menu:choosen', module);
   }
 
   showAlert(title: string, subTitle: string) {
