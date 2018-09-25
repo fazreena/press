@@ -1,6 +1,12 @@
+import { FamilyPage } from './../pages/pi/family/family';
+import { EducationPage } from './../pages/pi/education/education';
+import { PersonalInformationPage } from './../pages/pi/personal-information/personal-information';
+import { AttendancePage } from './../pages/tms/attendance/attendance';
+import { PunchPage } from './../pages/tms/punch/punch';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -8,27 +14,43 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { DataApiProvider } from '../providers/data-api/data-api';
+import { PaymentSlipPage } from '../pages/ps/payment-slip/payment-slip';
+import { EaPage } from '../pages/ps/ea/ea';
+import { PaymentHistoryPage } from '../pages/ps/payment-history/payment-history';
+
+const tms = [PunchPage, AttendancePage];
+const pi = [PersonalInformationPage, EducationPage, FamilyPage];
+const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    ...tms,
+    ...pi,
+    ...ps
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    ...tms,
+    ...pi,
+    ...ps
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataApiProvider
   ]
 })
 export class AppModule {}
