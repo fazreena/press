@@ -8,6 +8,13 @@ import { ListPage } from '../pages/list/list';
 import { AttendancePage } from '../pages/tms/attendance/attendance';
 import { DownloadPage } from '../pages/tms/download/download';
 import { PunchPage } from '../pages/tms/punch/punch';
+import { PersonalInformationPage } from '../pages/pi/personal-information/personal-information';
+import { FamilyPage } from '../pages/pi/family/family';
+import { EducationPage } from '../pages/pi/education/education';
+import { EaPage } from '../pages/ps/ea/ea';
+import { PaymentHistoryPage } from '../pages/ps/payment-history/payment-history';
+import { ContactPage } from '../pages/contact/contact';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +36,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'Contact', component: ContactPage  },
+      { title: 'About', component: AboutPage }
     ];
 
     events.subscribe('menu:choosen', (menu) => {
@@ -47,16 +56,30 @@ export class MyApp {
           ];
           break;
         case 'pi':
+        this.pages = [
+          { title: 'Home', component: HomePage },
+          { title: 'Personal Information', component:PersonalInformationPage },
+          { title: 'Family Information', component: FamilyPage },
+          { title: 'Education', component: EducationPage },
+        ];
           // put your code here
           break;
         case 'ps':
+        this.pages = [
+          { title: 'Home', component: HomePage },
+          { title: 'Ea', component:EaPage },
+          { title: 'Payment History', component: PaymentHistoryPage },
+          { title: 'Payment Slip', component: PaymentHistoryPage},
+        ];
           // put your code here
           break;
         default:
           console.log('No menu selected. Display home menu');
           this.pages = [
             { title: 'Home', component: HomePage },
-            { title: 'List', component: ListPage }
+            { title: 'List', component: ListPage },
+            { title: 'Contact', component: ContactPage},
+            { title: 'About', component: AboutPage }
           ];
       }
 

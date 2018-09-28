@@ -1,0 +1,97 @@
+page-map {
+  #floating-panel {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+  }
+
+  #map {
+    height: 30vh;
+  }
+
+  .map-icon {
+    color:#366BDD;
+  }
+
+  .book-icon {
+    color:#DA9B60;
+  }
+
+  .book-content {
+    color:#9C9EA0;
+    font-size:14px;
+  }
+
+  .map-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .locate-button {
+    background:linear-gradient(to bottom, #50598f, #72cae0);
+    border:5px solid white;
+  }
+
+  .locate-icon-ios {
+    font-size:34px;
+  }
+
+  .locate-icon-android {
+    font-size:30px;
+  }
+
+  .nav-button {
+    background:linear-gradient(to bottom, #bd4c0b, #e76c2a);
+    border:5px solid white;
+  }
+
+  .nav-icon-ios {
+    font-size:34px;
+  }
+
+  .nav-icon-android {
+    font-size:30px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .topleft {
+    position:absolute;
+    top: 90px;
+  }
+
+  .container-footer {
+    position: relative;
+    height:40px;
+    width:70px;
+    font-size:30px;
+    color: #000000;
+    border:1px solid #888888;
+    border-left-color:#ffffff;
+    border-bottom-color:#ffffff;
+    border-top-color:#ffffff;
+    background-color: #ffffff;
+    border-radius: 0;
+  }
+  
+  .footerleft {
+    padding-right:18px;
+    position:absolute;
+    color:rgb(223, 114, 12);
+  }
+
+}

@@ -1,3 +1,284 @@
 page-punch {
-
-}
+    .Row
+    {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 10px;
+    }
+  
+    .Column
+    {
+        display: table-cell;
+    }
+  
+    .date {
+      font-size:3vh;
+      color:#CED3D3;
+      margin-top:-1vh;
+    }
+  
+    .time {
+      font-size:8vh;
+      color:#747575;
+    }
+  
+    .time-out {
+      font-size:8vh;
+      color:#747575;
+    }
+  
+    .separator-time {
+      height:3vh;
+    }
+  
+    .separator-button {
+      height:5vh;
+    }
+  
+    //---------------------- Button In ------------------------
+  
+    .canvas-button-in {
+      border:1px solid #CED3D3;
+      background-color:#FFFFFF;
+      height:30vh;
+      width:70%;
+      border-radius:30px;
+    }
+  
+    .canvas-frame-in {
+      width:100%;
+      margin-top:-2vh;
+    }
+  
+    .label-in {
+      padding-top:0;
+      text-align:center;
+      color:black;
+      font-size:4vh;
+      font-weight:bold;
+    }
+  
+    .blink_me {
+      animation: blinker 1s linear infinite;
+    }
+    
+    @keyframes blinker {
+      0%, 49% {
+        color: black;
+      }
+      50%, 100% {
+        color: #e50000;
+      }
+    }
+  
+    .row.canvas-icon-frame-in {
+      padding-top:2vh;
+      padding-left:10%;
+    }
+  
+    .column.box-icon-left-in {
+      border:1px solid #CED3D3;
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+      width:45%;
+      height:13vh;
+    }
+  
+    .column.box-icon-right-in {
+      border-top-right-radius:5px;
+      border-bottom-right-radius:5px;
+      width:45%;height:13vh;
+      background-color:#DA4355;
+    }
+  
+    .icon-left-in {
+      color:#ACA9A9;
+      font-size:10vh;
+      font-weight:bolder;
+      padding: 1vh 0 1vh 0;
+    }
+  
+    .icon-right-in {
+      color:#FFFFFF;
+      font-size:10vh;
+      padding: 1vh 0 1vh 0;
+    }
+  
+    //---------------------- Button Disable In ------------------------
+  
+    .canvas-button-disable-in {
+      border:1px solid #CED3D3;
+      background-color:#FFFFFF;
+      height:30vh;
+      width:70%;
+      border-radius:30px;
+      display:none;
+    }
+  
+    .canvas-frame-disable-in {
+      width:100%;
+      margin-top:-2vh;
+    }
+  
+    .label-disable-in {
+      padding-top:0;
+      text-align:center;
+      color:#CED3D3;
+      font-size:4vh;
+      font-weight:bold;
+    }
+  
+    .row.canvas-icon-disable-frame-in {
+      padding-top:2vh;
+      padding-left:10%;
+    }
+  
+    .column.box-icon-disable-left-in {
+      border:1px solid #CED3D3;
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+      width:45%;
+      height:13vh;
+    }
+  
+    .icon-left-disable-in {
+      color:#CED3D3;
+      font-size:10vh;
+      font-weight:bolder;
+      padding: 1vh 0 1vh 0;
+    }
+  
+    .column.box-icon-disable-right-in {
+      border-top-right-radius:5px;
+      border-bottom-right-radius:5px;
+      width:45%;height:13vh;
+      background-color:#CED3D3;
+    }
+  
+    .icon-right-disable-in {
+      color:#FFFFFF;
+      font-size:10vh;
+      font-weight:bolder;
+      padding: 1vh 0 1vh 0;
+    }
+  
+    //---------------------- Button Out ------------------------
+  
+    .canvas-button-out {
+      border:1px solid #CED3D3;
+      background-color:#FFFFFF;
+      height:30vh;
+      width:70%;
+      border-radius:30px;
+    }
+  
+    .canvas-frame-out {
+      width:100%;
+      margin-top:-2vh;
+    }
+  
+    .label-out {
+      padding-top:0;
+      text-align:center;
+      color:black;
+      font-size:4vh;
+      font-weight:bold;
+    }
+  
+    .row.canvas-icon-frame-out {
+      padding-top:2vh;
+      padding-left:10%;
+    }
+  
+    .column.box-icon-left-out {
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+      width:45%;
+      height:13vh;
+      background-color:#49D0D4;
+    }
+  
+    .icon-left-out {
+      color:#FFFFFF;
+      font-size:10vh;
+      font-weight:bolder;
+      padding: 1vh 0 1vh 0;
+    }
+  
+    .column.box-icon-right-out {
+      border:1px solid #CED3D3;
+      border-top-right-radius:5px;
+      border-bottom-right-radius:5px;
+      width:45%;
+      height:13vh;
+    }
+  
+    .icon-right-out {
+      color:#ACA9A9;
+      font-size:10vh;
+      font-weight:bolder;
+      padding: 1vh 0 1vh 0;
+    }
+  
+    //---------------------- Button Disable Out ------------------------
+  
+    .canvas-button-disable-out {
+      border:1px solid #CED3D3;
+      background-color:#FFFFFF;
+      height:30vh;
+      width:70%;
+      border-radius:30px;
+      display:none;
+    }
+  
+    .canvas-frame-disable-out {
+      width:100%;
+      margin-top:-2vh;
+    }
+  
+    .label-disable-out {
+      padding-top:0;
+      text-align:center;
+      color:#CED3D3;
+      font-size:4vh;
+      font-weight:bold;
+    }
+  
+    .row.canvas-icon-frame-disable-out {
+      padding-top:2vh;
+      padding-left:10%;
+    }
+  
+    .column.box-icon-left-disable-out {
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+      width:45%;
+      height:13vh;
+      background-color:#CED3D3;
+    }
+  
+    .icon-left-disable-out {
+      color:#FFFFFF;
+      font-size:10vh;
+      font-weight:bolder;
+      padding: 1vh 0 1vh 0;
+    }
+  
+    .column.box-icon-right-disable-out {
+      border:1px solid #CED3D3;
+      border-top-right-radius:5px;
+      border-bottom-right-radius:5px;
+      width:45%;
+      height:13vh;
+    }
+  
+    .icon-right-disable-out {
+      color:#CED3D3;
+      font-size:10vh;
+      font-weight:bolder;
+      padding: 1vh 0 1vh 0;
+    }
+  
+  }
+  

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="sign"></ion-icon>
+    </button>
+    <ion-title>Attendance on Web Browser</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item class="img-profile">
+      <div align=center>
+        <ion-avatar>
+          <ion-icon name="ios-contact" class="avatar"></ion-icon>
+        </ion-avatar>
+        <div class="label-name">
+          {{ data.name }}
+          <br/>Staff Number {{ data.token }}
+        </div>
+      </div>
+    </ion-item>
+    <div *ngFor="let item of info" text-wrap>
+      <ion-item *ngIf="item.Member.post">
+        <h2>Post</h2>
+        <ion-note> {{ item.Member.post }} </ion-note>
+      </ion-item>
+      <ion-item *ngIf="item.Member.company">
+        <h2>Company</h2>
+        <ion-note> {{ item.Member.company }} </ion-note>
+      </ion-item>
+      <ion-item *ngIf="item.Member.location">
+        <h2>Location</h2>
+        <ion-note> {{ item.Member.location }} </ion-note>
+      </ion-item>
+    </div>
+    <ion-list no-lines>
+      <ion-item style="background-color:orange;">
+        <ion-icon name="book" item-start class="book-icon"></ion-icon>
+        <ion-label>Reason</ion-label>
+        <ion-select class="book-content" item-end [(ngModel)]="reason">
+          <ion-option *ngFor="let item of reasons" value="{{item.Reason.id}}" [selected]="reason == item.Reason.id">{{ item.Reason.name }}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="reason == '8' ||  reason == '7'">
+        <ion-icon name="ios-information-circle-outline" item-start class="book-icon"></ion-icon>
+        <ion-label>Description</ion-label>
+        <ion-input type="text" round placeholder="Provide additional description for the selected Reason: Others" clearInput [(ngModel)]="description">{{description}}</ion-input>
+      </ion-item>
+      <div padding style="background-color:#ffffff;" *ngIf="isAllow()">
+        <button ion-button color="primary" class="nice-button" block (click)="submitNativeData()">Confirm</button>
+      </div>
+    </ion-list>
+
+  </ion-list>
+</ion-content>

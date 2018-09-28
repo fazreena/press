@@ -3,10 +3,115 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>TMS</ion-title>
+    <ion-title>Check In/Out </ion-title>
   </ion-navbar>
 </ion-header>
 
+
+<ion-content padding onload="startTime()">
+
+  <div align="center">
+
+    <div class="date">
+      {{ whatDate | async | date: "EEE, dd MMM, yyyy" }}
+    </div>
+
+    <div class="time" *ngIf="!isLateCheckin()">
+      {{ whatDate | async | date: "hh:mm a" }}
+    </div>
+
+    <div class="time blink_me" *ngIf="isLateCheckin()">
+      {{ whatDate | async | date: "hh:mm a" }}
+    </div>
+
+    <div class="date blink_me" *ngIf="isLateCheckin()">
+      Late Entry
+    </div>
+
+    <div class="date blink_me" *ngIf="isCheckedIn == true && isEarlyCheckout()">
+      Early Check Out <br/>
+      {{ timer | async}}
+    </div>
+
+    <div class="date" *ngIf="isCheckedIn == true && !isEarlyCheckout()">
+      Clocked In <br/> {{ timer | async}}
+    </div>
+
+    <!-- <ng-template class="date" #sufficientWorkHour>
+      Recorded Hour(s): {{ timer | async}}
+    </ng-template> -->
+
+    <div id="clockout" class="time-out">
+      -- : -- --
+    </div>
+
+    <div class="separator-time"></div>
+
+    <button id="cin-y" ion-button class="canvas-button-in" (click)="checkin()">
+      <div class="canvas-frame-in">
+        <div class="label-in">Check In</div>
+        <div class="row canvas-icon-frame-in" align="center">
+          <div class="column box-icon-left-in">
+            <ion-icon name="ios-arrow-dropright" item-start class="icon-left-in"></ion-icon>
+          </div>
+          <div class="column box-icon-right-in">
+            <ion-icon name="ios-partly-sunny" item-end class="icon-right-in"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </button>
+
+    <!-- Disable Button for Check In -->
+    <button id="cin-x" ion-button class="canvas-button-disable-in list card animated shake">
+      <div class="canvas-frame-disable-in">
+        <div class="label-disable-in">Check In</div>
+        <div class="row canvas-icon-disable-frame-in" align="center">
+          <div class="column box-icon-disable-left-in">
+            <ion-icon name="ios-arrow-dropright" item-start class="icon-left-disable-in"></ion-icon>
+          </div>
+          <div class="column box-icon-disable-right-in">
+            <ion-icon name="ios-partly-sunny" item-end class="icon-right-disable-in"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </button>
+    <!-- End Disable Button for Check In -->
+
+    <div class="separator-button"></div>
+
+    <button id="cin-k" ion-button class="canvas-button-out" (click)="checkout()">
+      <div class="canvas-frame-out">
+        <div class="label-out">Check Out</div>
+        <div class="row canvas-icon-frame-out" align="center">
+          <div class="column box-icon-left-out">
+            <ion-icon name="ios-cloudy-night" item-start class="icon-left-out"></ion-icon>
+          </div>
+          <div class="column box-icon-right-out">
+            <ion-icon name="ios-arrow-dropright" item-end class="icon-right-out"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </button>
+
+    <!-- Disable Button for Check Out -->
+    <button id="cin-j" ion-button class="canvas-button-disable-out list card animated shake">
+      <div class="canvas-frame-disable-out">
+        <div class="label-disable-out">Check Out</div>
+        <div class="row canvas-icon-frame-disable-out" align="center">
+          <div class="column box-icon-left-disable-out">
+            <ion-icon name="ios-cloudy-night" item-start class="icon-left-disable-out"></ion-icon>
+          </div>
+          <div class="column box-icon-right-disable-out">
+            <ion-icon name="ios-arrow-dropright" item-end class="icon-right-disable-out"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </button>
+    <!-- End Disable Button for Check Out -->
+
+  </div>
+
+</ion-content>
 
 <ion-content padding>
 

@@ -1,0 +1,41 @@
+<div>
+<ion-list>
+  <div align="center" style="padding-top:20px;">
+    <ion-avatar>
+      <ion-icon name="ios-contact" style="font-size:100px;color:#8D8A8A"></ion-icon>
+    </ion-avatar>
+    <div>{{ data.name }} </div>
+    <!-- <div style="color:#8D8A8A;font-size:12px;">Senior Associate</div> -->
+    <div style="color:#8D8A8A;font-size:12px;">{{ data.token }} </div>
+  </div>
+
+</ion-list>
+
+<div padding style="margin-top:-20px;">
+  <div style="border-top:1px solid #C9C6C6;"></div>
+</div>
+
+<ion-list no-lines>
+
+  <ion-item (click)="navpunch()">
+    <ion-icon name='ios-time-outline' item-start style="color:#DA9B60;"></ion-icon>
+    Check In / Out
+  </ion-item>
+
+  <ion-item (click)="navattendance()">
+    <ion-icon name='md-list-box' item-start style="color:#366BDD;"></ion-icon>
+    Attendance
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name='ios-contacts' item-start color="secondary"></ion-icon>
+    Subordinate
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name='ios-cog' item-start color="danger"></ion-icon>
+    Settings
+  </ion-item>
+
+</ion-list>
+</div>

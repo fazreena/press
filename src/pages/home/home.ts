@@ -13,19 +13,19 @@ export class HomePage {
   slides = [
     {
       title: "Time Attendance",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+      description: " This  menu  provides  user  related  to  Attendance  Check In/Out, List and Report Hope you enjoy working here :-).",
       image: "assets/imgs/tms.png",
       page: 'PunchPage'
     },
     {
       title: "Personal Information",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
+      description: "  This menu  require  user to  provide  their  Personal  Information   Not  everything  must  be  sharing  but  sharing  makes  people  knows  u  better  :-).",
       image: "assets/imgs/personal-info.png",
       page: 'PersonalInformationPage'
     },
     {
       title: "Payment Slips",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
+      description: "This menu provide all information related to payment and salary  Never spend your money before you have earned it.",
       image: "assets/imgs/payslip.png",
       page: 'PaymentSlipPage'
     },

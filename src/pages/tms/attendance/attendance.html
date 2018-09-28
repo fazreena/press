@@ -3,11 +3,84 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Attendance List</ion-title>
+    <ion-title>Attendance</ion-title>
   </ion-navbar>
+
+
+
+ <!-- <ion-searchbar></ion-searchbar> -->
 </ion-header>
 
+<ion-content>
 
-<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div *ngFor="let service of logs let id = index">
+    <ion-list *ngIf="id % 2 == 0" class="list card animated bounceInLeft" >
+
+      <ion-list-header class="header">
+        {{ service.UserService.service_date | date:'EEEE, dd/MM/yyyy'}}
+      </ion-list-header>
+
+      <ion-item-sliding *ngFor="let tag of service.UserTag">
+        <ion-item>
+          <ion-icon name="partly-sunny" class="icon-checkin" *ngIf="tag.direction == 1" item-start></ion-icon>
+          <ion-icon name="cloudy-night" class="icon-checkout" *ngIf="tag.direction == 2" item-left></ion-icon>
+          <h2 *ngIf="tag.direction == 1">Check In</h2>
+          <h2 *ngIf="tag.direction == 2">Check Out</h2>
+          <p>{{ tag.tag_date | date:'hh:mma'}}</p>
+          <ion-note>
+            [ Reason: {{tag.reason}} ]
+          </ion-note><br/>
+          <ion-note *ngIf="tag.lat == 0">via Web Browser </ion-note>
+          <ion-note item-end>
+            {{ tag.tag_date | date:'dd/MM/yyyy'}} 
+          </ion-note>
+        </ion-item>
+        <ion-item-options *ngIf="tag.lat > 0">
+          <button ion-button color="primary" icon-start (click)="navigate(tag)">
+            <ion-icon name="ios-more"></ion-icon>
+            More
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+
+    <ion-list *ngIf="id % 2 == 1" class="list card animated bounceInRight" >
+
+      <ion-list-header class="header">
+        {{ service.UserService.service_date | date:'EEEE, dd/MM/yyyy'}}
+      </ion-list-header>
+
+      <ion-item-sliding *ngFor="let tag of service.UserTag">
+        <ion-item>
+          <ion-icon name="partly-sunny" class="icon-checkin" *ngIf="tag.direction == 1" item-start></ion-icon>
+          <ion-icon name="cloudy-night" class="icon-checkout" *ngIf="tag.direction == 2" item-left></ion-icon>
+          <h2 *ngIf="tag.direction == 1">Check In</h2>
+          <h2 *ngIf="tag.direction == 2">Check Out</h2>
+          <p>{{ tag.tag_date | date:'hh:mma'}}</p>
+          <ion-note>
+            [ Reason: {{tag.reason}} ]
+          </ion-note><br/>
+          <ion-note *ngIf="tag.lat == 0">via Web Browser </ion-note>
+          <ion-note item-end>
+            {{ tag.tag_date | date:'dd/MM/yyyy'}} 
+          </ion-note>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button color="primary" icon-start (click)="navigate(tag)">
+            <ion-icon name="ios-more"></ion-icon>
+            More
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+  </div>
 
 </ion-content>
+

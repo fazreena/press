@@ -1,3 +1,5 @@
+import { LocationAccuracyProvider } from '../providers/location-accuracy/location-accuracy';
+import { LocationTrackerProvider } from '../providers/location-tracker/location-tracker';
 import { DownloadPage } from './../pages/tms/download/download';
 import { FamilyPage } from './../pages/pi/family/family';
 import { EducationPage } from './../pages/pi/education/education';
@@ -8,6 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
+import { DatePipe } from '@angular/common';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -19,6 +22,8 @@ import { DataApiProvider } from '../providers/data-api/data-api';
 import { PaymentSlipPage } from '../pages/ps/payment-slip/payment-slip';
 import { EaPage } from '../pages/ps/ea/ea';
 import { PaymentHistoryPage } from '../pages/ps/payment-history/payment-history';
+import { ApiProvider } from '../providers/api/api';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 const tms = [PunchPage, AttendancePage, DownloadPage];
 const pi = [PersonalInformationPage, EducationPage, FamilyPage];
@@ -51,7 +56,13 @@ const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataApiProvider
+    DataApiProvider,
+    ApiProvider,
+    AuthServiceProvider,
+    LocationAccuracyProvider,
+    LocationTrackerProvider,
+    DatePipe,
+
   ]
 })
 export class AppModule {}

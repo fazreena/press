@@ -1,0 +1,73 @@
+<ion-content class="main-view">
+
+  <div class="overIndex" (click)="dismiss()"></div>
+
+  <div class="modal_content_ios" showWhen="ios">
+    <ion-item no-lines>
+      <ion-icon name="map" item-start large class="map-icon"></ion-icon>
+      <h2>Location Address</h2>
+      <p> {{ address }} </p>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-icon name="time" item-start large color="secondary"></ion-icon>
+      <h2>Date & Time</h2>
+      <p> {{ time | date:'dd/MM/yyyy hh:mm a'}} </p>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-icon name="globe" item-start large color="danger"></ion-icon>
+      <h2>GPS Coordinate</h2>
+      <p> Lat : {{ latitude | number:'1.1-5'}} , Long : {{ longitude | number:'2.1-5' }} </p>
+    </ion-item>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-icon name="book" item-start class="book-icon"></ion-icon>
+        <ion-label>Reason</ion-label>
+        <ion-select class="book-content" item-end [(ngModel)]="reason">
+          <ion-option *ngFor="let item of reasons" value="{{item.Reason.id}}" [selected]="reason == item.Reason.id">{{ item.Reason.name }} </ion-option>
+        </ion-select>
+      </ion-item><ion-item *ngIf="reason == '8' || reason == '7'">
+        <ion-icon name="ios-information-circle-outline" item-start class="book-icon"></ion-icon>
+        <ion-label>Description</ion-label>
+        <ion-input type="text" wrap round placeholder="Provide additional description for the selected Reason: Others" clearInput [(ngModel)]="description">{{description}}</ion-input>
+      </ion-item>
+      <div padding style="background-color:#ffffff;">
+        <button *ngIf="isAllow()" ion-button color="{{ buttonColor }}" class="nice-button" block (click)="submitNativeData()">{{ buttonText }}</button>
+      </div>
+    </ion-list>
+  </div>
+
+  <div class="modal_content_android" showWhen="android,windows">
+    <ion-item no-lines>
+      <ion-icon name="map" item-start large class="map-icon"></ion-icon>
+      <h2>Location Address</h2>
+      <p> {{ address }} </p>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-icon name="time" item-start large color="secondary"></ion-icon>
+      <h2>Date & Time</h2>
+      <p> {{ time | date:'dd/MM/yyyy h:m a'}} </p>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-icon name="globe" item-start large color="danger"></ion-icon>
+      <h2>GPS Coordinate</h2>
+      <p> Lat : {{ latitude | number:'1.1-5'}} , Long : {{ longitude | number:'2.1-5' }}</p>
+    </ion-item>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-icon name="book" item-start class="book-icon"></ion-icon>
+        <ion-label>Reason</ion-label>
+        <ion-select class="book-content" item-end [(ngModel)]="reason">
+          <ion-option *ngFor="let item of reasons" value="{{item.Reason.id}}" [selected]="reason == item.Reason.id">{{ item.Reason.name }}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="reason == '8' || reason == '7'">
+        <ion-label>Description</ion-label>
+        <ion-input type="text" round placeholder="Provide additional description for the selected Reason: Others" clearInput [(ngModel)]="description">{{description}}</ion-input>
+      </ion-item>
+      <div padding style="background-color:#ffffff;">
+        <button *ngIf="isAllow()" ion-button color="{{ buttonColor }}" class="nice-button" block (click)="submitNativeData()">{{ buttonText }}</button>
+      </div>
+    </ion-list>
+  </div>
+
+</ion-content>

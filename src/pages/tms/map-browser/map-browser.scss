@@ -1,0 +1,113 @@
+page-map-browser {
+    .img-profile {
+        background:linear-gradient(to bottom, #81dbd7, #72cae0);
+        height:30vh;
+      }
+    
+      .avatar {
+        font-size:100px;
+        color:#FFFFFF;
+      }
+    
+      .label-name {
+        color:#FFFFFF;
+      }
+    
+      .label-id {
+        color:#FFFFFF;
+        font-size:12px;
+    }
+
+    .Row
+  {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-spacing: 10px;
+  }
+
+  .Column
+  {
+      display: table-cell;
+  }
+
+  .date {
+    font-size:3vh;
+    color:#CED3D3;
+    margin-top:-1vh;
+  }
+
+  .time {
+    font-size:8vh;
+    color:#747575;
+  }
+
+  .time-out {
+    font-size:8vh;
+    color:#747575;
+  }
+
+  .separator-time {
+    height:3vh;
+  }
+
+  .separator-button {
+    height:5vh;
+  }
+
+    //---------------------- Button In ------------------------
+
+  .canvas-button-in {
+    border:1px solid #CED3D3;
+    background-color:#FFFFFF;
+    height:30vh;
+    width:70%;
+    border-radius:30px;
+  }
+
+  .canvas-frame-in {
+    width:100%;
+    margin-top:-2vh;
+  }
+
+  .label-in {
+    padding-top:0;
+    text-align:center;
+    color:black;
+    font-size:4vh;
+    font-weight:bold;
+  }
+
+  .row.canvas-icon-frame-in {
+    padding-top:2vh;
+    padding-left:10%;
+  }
+
+  .column.box-icon-left-in {
+    border:1px solid #CED3D3;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    width:45%;
+    height:13vh;
+  }
+
+  .column.box-icon-right-in {
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    width:45%;height:13vh;
+    background-color:#DA4355;
+  }
+
+  .icon-left-in {
+    color:#ACA9A9;
+    font-size:10vh;
+    font-weight:bolder;
+    padding: 1vh 0 1vh 0;
+  }
+
+  .icon-right-in {
+    color:#FFFFFF;
+    font-size:10vh;
+    padding: 1vh 0 1vh 0;
+  }
+}
