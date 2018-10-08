@@ -12,9 +12,9 @@ import { PaymentSlipPage } from '../ps/payment-slip/payment-slip';
 export class HomePage {
   slides = [
     {
-      title: "Time Attendance",
-      description: " This  menu  provides  user  related  to  Attendance  Check In/Out, List and Report Hope you enjoy working here :-).",
-      image: "assets/imgs/tms.png",
+      title: "PRESS",
+      description: " This application helps PRASARANA to be more digitalize in future :-).",
+      image: "assets/imgs/home7.PNG",
       page: 'PunchPage'
     },
     {

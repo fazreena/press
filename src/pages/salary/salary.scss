@@ -1,0 +1,116 @@
+// page-salary {
+
+
+
+
+  // .grid-full ion-row {
+  //   height: 100%;
+  //   padding: 0;
+  //   flex-wrap: wrap;
+  // }
+  
+  // .grid-full ion-col {
+  //   flex: 0 0 50%;
+  //   max-width: 50%;
+  //   text-align: center;
+  //   padding: 10px 5px;
+  // }
+  
+  // .cell-1 {
+  //   background-color:#fff59d;
+  // }
+  // .cell-2 {
+  //   background-color: #ffea00;
+  // }
+  // .cell-3 {
+  //   background-color: #ffff8d;
+  // }
+  // .cell-4 {
+  //   background-color: #fff176;
+  // }
+  // .cell-5 {
+  //   background-color:#fff9c4;
+  // }
+  // .cell-6 {
+  //   background-color: #fff59d;
+  // }
+
+  
+  scroll /* because the <ion-content> content is placed inside a div.scroll */
+  {
+    height: 100%;
+  }
+  
+  .container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;  
+  }
+  
+  .container > .cell-row {
+    flex: 1;
+    display: flex;
+  }
+  .cell-row > div {
+    flex: 1;
+    flex-grow: 1;
+    color: #000;
+    
+    /* Flex for these containers (cells) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .container i[class^="ion-"] {
+    font-size: 200px;
+  }
+  
+  
+  
+  
+  
+  /* doesn't matter */
+  .bar-header {
+    background-color: #241D54 !important;
+    border-bottom: 0 !important;
+  }
+  .bar-header h1 {
+    color: #000 !important;
+    font-size: 200px !important;
+  }
+  
+  .cell-row-1 {
+    background-color: rgb(233, 229, 229);
+  }
+  .cell-row-2 {
+    background-color: rgb(233, 229, 229);
+  }
+  .cell-row-3 {
+    background-color: rgb(233, 229, 229);
+  }
+  
+  .cell-1 {
+    background-color:#fff59d;
+  }
+  .cell-2 {
+    background-color: #ffff8d;
+  }
+  .cell-3 {
+    background-color:#ffff8d;
+  }
+  .cell-4 {
+    background-color: #fff176;
+  }
+  // .cell-5 {
+  //   background-color:#fff9c4;
+  // }
+  // .cell-6 {
+  //   background-color: #fff59d;
+  // }
+
+  .button {
+    color:#fff176 !important;
+    
+  }

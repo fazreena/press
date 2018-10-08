@@ -15,6 +15,14 @@ import { EaPage } from '../pages/ps/ea/ea';
 import { PaymentHistoryPage } from '../pages/ps/payment-history/payment-history';
 import { ContactPage } from '../pages/contact/contact';
 import { AboutPage } from '../pages/about/about';
+// import { MapPage } from '../tms/map/map';
+
+
+import { TimePage } from '../pages/Time/Time';
+import { SalaryPage } from '../pages/Salary/salary';
+import { StaffPage } from '../pages/Staff/staff';
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +32,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: string }>;
 
   constructor(
     public platform: Platform,
@@ -35,56 +43,59 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Contact', component: ContactPage  },
-      { title: 'About', component: AboutPage }
+      { title: 'Home', component: HomePage, icon:'ios-home' },
+      { title: 'Staff Profile', component: StaffPage,icon:'ios-people'  },
+      { title: 'Time Attendance', component:TimePage, icon: 'ios-alarm' },
+      { title: 'Dashboard', component: AboutPage, icon:'ios-information-circle'},
+      { title: 'Salary/Claim', component: SalaryPage, icon:'logo-bitcoin' }
     ];
-
-    events.subscribe('menu:choosen', (menu) => {
-      // user and time are the same arguments passed in `events.publish(user, time)`
-      console.log('Menu choosen', menu);
-      console.log('Display submenu for ' + menu);
-
-      switch (menu) {
-        case 'tms':
-          this.pages = [
-            { title: 'Home', component: HomePage },
-            { title: 'Check In/Out', component: PunchPage },
-            { title: 'Attendance List', component: AttendancePage },
-            { title: 'Report', component: DownloadPage },
-          ];
-          break;
-        case 'pi':
-        this.pages = [
-          { title: 'Home', component: HomePage },
-          { title: 'Personal Information', component:PersonalInformationPage },
-          { title: 'Family Information', component: FamilyPage },
-          { title: 'Education', component: EducationPage },
-        ];
-          // put your code here
-          break;
-        case 'ps':
-        this.pages = [
-          { title: 'Home', component: HomePage },
-          { title: 'Ea', component:EaPage },
-          { title: 'Payment History', component: PaymentHistoryPage },
-          { title: 'Payment Slip', component: PaymentHistoryPage},
-        ];
-          // put your code here
-          break;
-        default:
-          console.log('No menu selected. Display home menu');
-          this.pages = [
-            { title: 'Home', component: HomePage },
-            { title: 'List', component: ListPage },
-            { title: 'Contact', component: ContactPage},
-            { title: 'About', component: AboutPage }
-          ];
-      }
-
-    });
   }
+
+//     events.subscribe('menu:choosen', (menu) => {
+//       // user and time are the same arguments passed in `events.publish(user, time)`
+//       console.log('Menu choosen', menu);
+//       console.log('Display submenu for ' + menu);
+
+//       switch (menu) {
+//         case 'tms':
+//           this.pages = [
+//             { title: 'Home', component: HomePage },
+//             { title: 'Check In/Out', component: PunchPage },
+//             { title: 'Attendance List', component: AttendancePage },
+//             { title: 'Report', component: DownloadPage },
+//           ];
+//           break;
+//         case 'pi':
+//         this.pages = [
+//           { title: 'Home', component: HomePage },
+//           { title: 'Personal Information', component:PersonalInformationPage },
+//           { title: 'Family Information', component: FamilyPage },
+//           { title: 'Education', component: EducationPage },
+//         ];
+//           // put your code here
+//           break;
+//         case 'ps':
+//         this.pages = [
+//           { title: 'Home', component: HomePage },
+//           { title: 'Ea', component:EaPage },
+//           { title: 'Payment History', component: PaymentHistoryPage },
+//           { title: 'Payment Slip', component: PaymentHistoryPage},
+//         ];
+//           // put your code here
+//           break;
+//         default:
+//           console.log('No menu selected. Display home menu');
+//           this.pages = [
+//             { title: 'Home', component: HomePage },
+//             { title: 'Staff Profile', component: StaffPage},
+//             { title: 'Time Attendance', component:TimePage },
+//             { title: 'Dashboard', component: AboutPage},
+//             { title: 'Salary/Claim', component: SalaryPage }
+//           ];
+//       }
+
+//     });
+//   }
 
   initializeApp() {
     this.platform.ready().then(() => {

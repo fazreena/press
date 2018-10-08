@@ -15,6 +15,13 @@ import { DatePipe } from '@angular/common';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { StaffPage } from '../pages/Staff/staff';
+import { TimePage } from '../pages/Time/Time';
+import { AboutPage } from '../pages/about/about';
+import { SalaryPage } from '../pages/Salary/salary';
+// import { MapPage } from '../tms/map/map';
+// import{ tmspage } from '../pages/tms';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +31,7 @@ import { EaPage } from '../pages/ps/ea/ea';
 import { PaymentHistoryPage } from '../pages/ps/payment-history/payment-history';
 import { ApiProvider } from '../providers/api/api';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+
 
 const tms = [PunchPage, AttendancePage, DownloadPage];
 const pi = [PersonalInformationPage, EducationPage, FamilyPage];
@@ -36,7 +44,15 @@ const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
     ListPage,
     ...tms,
     ...pi,
-    ...ps
+    ...ps,
+    StaffPage,
+    TimePage,
+    AboutPage,
+    SalaryPage,
+  
+    
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -50,7 +66,17 @@ const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
     ListPage,
     ...tms,
     ...pi,
-    ...ps
+    ...ps,
+    StaffPage,
+    TimePage,
+    AboutPage,
+    SalaryPage,
+
+
+
+
+    
+   
   ],
   providers: [
     StatusBar,
@@ -62,6 +88,7 @@ const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
     LocationAccuracyProvider,
     LocationTrackerProvider,
     DatePipe,
+  
 
   ]
 })
