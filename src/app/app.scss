@@ -13,7 +13,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .toolbar-background {
-    background-color:#00bfa5;
+    background-color:#bbdefb;
 }
 
 // //ion-menu{
@@ -23,10 +23,10 @@
 //    }
 ion-menu {
     ion-content {
-        background-color:#00bfa5!important;
+        background-color:#bbdefb!important;
     }
     .item {
-        background:#00bfa5!important;
+        background:#bbdefb!important;
     }
 }
 

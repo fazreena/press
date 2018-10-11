@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -7,6 +7,307 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding> -->
+
+    <!-- <ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle> -->
+            <!-- <ion-icon name="SALARY/CLAIM"></ion-icon> -->
+            <!-- <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+          <ion-title>About Profile</ion-title>
+        </ion-navbar>
+      </ion-header> -->
+
+
+ <ion-header>
+    <ion-navbar>
+    <!-- <ion-toolbar color="navbar"> -->
+      <button ion-button menuToggle>
+      <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <ion-searchbar id="name" showCancelButton></ion-searchbar>
+    </ion-navbar>
+    <!-- </ion-toolbar> -->
+  </ion-header>
+
+  <ion-content class="card-background-page">
+  <ion-content class="content">
+      <ion-grid fixed no-padding>
+            <img src="/assets/imgs/big2.png">
+      </ion-grid>
+
+
+
+      <ion-list no-lines>
+          <ion-item no-lines text-center class="name-item">
+            <h1>Norfazreena Ishak</h1>
+          </ion-item>
+          <ion-item no-lines text-center>
+            <h3 style="color:#5b2acc;"> Everything Happens for A Reason</h3>
+          </ion-item>
+          <ion-item no-lines class="ico-item">
+            <ion-grid>
+              <ion-row class="row-border">
+                 <ion-col (click)="viewAboutprofile()"> 
+                  <div align="center">
+                    <ion-icon name="ios-create-outline" class="ico-size"  ></ion-icon>
+                    <br>
+                    <label class="header-font" style="padding-right:10px;">About Profile </label>
+                  </div>
+               </ion-col>  
+                 <ion-col (click)="showReleaseNote()">  
+                  <div align="center">
+                    <ion-icon name="ios-person-outline" class="ico-size"></ion-icon>
+                    <br>
+                    <label class="header-font">Update Profile</label>
+                  </div>
+                 </ion-col> 
+                <ion-col (click)="showReleaseNote()"> 
+                  <div align="center">
+                    <ion-icon name="ios-list-outline" class="ico-size"></ion-icon>
+                    <br>
+                    <label class="header-font">Activity Log</label>
+                  </div>
+                </ion-col> 
+               
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+ 
+
+        
+
+
+
+
+
+ <!-- <ion-content class="card-background-page"> -->
+
+    <!-- <ion-card>
+      <img src="/assets/imgs/home5.jpg"/>
+      <div class="card-title">Norfazreena Ishak</div>
+      <div class="card-subtitle">Temporary Staff</div>
+    </ion-card>
+     -->
+   
+  <!-- <ion-item>
+      <ion-avatar item-start>
+        <img src="/assets/imgs/images2.jpg">
+      </ion-avatar>
+      <h2>Fazreena Ishak</h2>
+      <p>October 9, 2018</p>
+    </ion-item>  -->
+
+    <ion-card>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="/assets/imgs/profile3.jpg">
+        </ion-avatar>
+        <h2>Norfazreena Ishak</h2>
+        <p>Fazreena ishak shared a post</p>
+        <p>Oktober 10, 2018</p>
+      </ion-item>
+    
+      <img src="/assets/imgs/pro1.jpg">
+    
+      <ion-card-content>
+        <p>The road to success is always under construction .....</p>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
+
+
+    <ion-card>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="/assets/imgs/profile3.jpg">
+        </ion-avatar>
+        <h2>Norfazreena Ishak</h2>
+        <p>Fazreena ishak shared a post</p>
+        <p>Oktober 5, 2018</p>
+      </ion-item>
+    
+      <img src="/assets/imgs/pro2.jpg">
+    
+      <ion-card-content>
+        <p>Always think positive :-)</p>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>9 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>1 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
+
+
+    <ion-card>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="/assets/imgs/profile3.jpg">
+        </ion-avatar>
+        <h2>Norfazreena Ishak</h2>
+        <p>Fazreena ishak shared a post</p>
+        <p>Oktober 5, 2018</p>
+      </ion-item>
+    
+      <img src="/assets/imgs/pro3.jpg">
+    
+      <ion-card-content>
+        <p>Prayer is the key of the morning and the bolt of the evening :-)</p>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>20 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>5 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
 
 </ion-content>
+</ion-content>
+    <!-- <img src="img/advance-card-bttf.png"> -->
+  
+    <!-- <ion-card-content>
+      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+    
+
+    <ion-card-content>
+        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+      
+  
+
+
+  </ion-content>   -->
+
+
+
+  <!-- <ion-card>
+    <ion-item> -->
+      <!-- <ion-avatar item-left> -->
+        <!-- <img src="/assets/imgs/home4.jpg"> -->
+      <!-- </ion-avatar> -->
+      <!-- <h2>9 September 2018</h2>
+      <p>The day when the journey begins</p>
+    </ion-item>
+    <img src="/assets/imgs/home5.jpg">
+    <ion-card-content>
+      <p>LRT 3 News</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div></div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div></div>
+        </button>
+      </ion-col>
+      <ion-col center text-center> -->
+        <!-- <ion-note>
+          
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card> -->

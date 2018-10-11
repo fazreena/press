@@ -1,3 +1,4 @@
+import { AboutprofilePage } from './../pages/pi/aboutprofile/aboutprofile';
 import { LocationAccuracyProvider } from '../providers/location-accuracy/location-accuracy';
 import { LocationTrackerProvider } from '../providers/location-tracker/location-tracker';
 import { DownloadPage } from './../pages/tms/download/download';
@@ -49,6 +50,7 @@ const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
     TimePage,
     AboutPage,
     SalaryPage,
+    AboutprofilePage,
   
     
     
@@ -71,6 +73,7 @@ const ps = [PaymentSlipPage, EaPage, PaymentHistoryPage];
     TimePage,
     AboutPage,
     SalaryPage,
+    AboutprofilePage
 
 
 

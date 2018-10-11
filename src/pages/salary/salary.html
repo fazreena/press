@@ -1,7 +1,8 @@
 <ion-header>
     <ion-navbar>
       <button ion-button menuToggle>
-        <ion-icon name="SALARY/CLAIM"></ion-icon>
+        <!-- <ion-icon name="SALARY/CLAIM"></ion-icon> -->
+        <ion-icon name="ios-arrow-back"></ion-icon>
       </button>
       <ion-title>SALARY/CLAIM</ion-title>
     </ion-navbar>
@@ -9,7 +10,7 @@
   
    
 
-    <ion-content has-header="true">
+    <!-- <ion-content has-header="true">
 
       <div class="container">
 
@@ -48,7 +49,7 @@
             </div>
           </div>
         </div>
-
+ -->
 
         <!-- <div class="cell-row cell-row-3">
           <div class="cell-5">
@@ -64,10 +65,67 @@
             </div>
           </div>
         </div> -->
-      </div>
+      <!-- </div>
    
 
 </ion-content> 
+   -->
+
+   <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <ion-card>
+            <ion-card-header>
+              EA
+            </ion-card-header>
+            <ion-card-content>
+              <img src="assets/imgs/s4.png" (click)="viewEa()"/>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6>
+          <ion-card  text-wrap>
+            <ion-card-header text-wrap>
+              Payment Slip
+            </ion-card-header>
+            <ion-card-content>
+              <img src="assets/imgs/s2.png" (click)="viewPaymentSlip()"/>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+     <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <ion-card text-wrap>
+            <ion-card-header text-wrap>
+              Payment History
+            </ion-card-header>
+            <ion-card-content>
+              <img src="assets/imgs/s5.png" (click)="viewPaymentHistory()"/>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6>
+          <ion-card>
+            <ion-card-header>
+              ??
+            </ion-card-header>
+            <ion-card-content>
+              <img src="assets/imgs/s7.png" (click)= "viewEa()"/>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+
   
 
   
+
+
